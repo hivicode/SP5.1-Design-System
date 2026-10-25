@@ -1,0 +1,38 @@
+/* 1. BLOCK: Komponen dasar container */
+.container {
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  color: #334155;
+  margin: 12px 0;
+  transition: all 0.2s ease;
+}
+
+/* 2. MODIFIERS (Ukuran: size) */
+.container--small {
+  padding: 10px 14px;
+  font-size: 13px;
+}
+
+.container--medium {
+  padding: 16px 20px;
+  font-size: 15px;
+}
+
+.container--large {
+  padding: 24px 28px;
+  font-size: 17px;
+}
+
+/* 3. MODIFIER BOOLEAN (Bordered) */
+.container--bordered {
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* 4. ELEMENT: Bagian di dalam block container */
+.container__title {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  color: #0f172a;
+}

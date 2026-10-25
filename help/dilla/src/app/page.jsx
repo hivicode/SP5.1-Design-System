@@ -1,6 +1,7 @@
 import Card from "./components/Card";
 import ContainerFunction from "./components/ContainerFunction";
 import ContainerClass from "./components/ContainerClass";
+import Container from "./components/Container";
 import { PRODUCTS } from "./data/products";
 
 export default function Home() {
@@ -13,7 +14,14 @@ export default function Home() {
         </p>
       </header>
 
-      {/* Area Latihan Container */}
+      {/* Grid Katalog Produk */}
+      <main className="product-grid">
+        {PRODUCTS.map((product) => (
+          <Card key={product.id} product={product} />
+        ))}
+      </main>
+
+            {/*Container */}
       <section style={{ maxWidth: "1200px", margin: "0 auto 16px", padding: "0 24px" }}>
         {/* Functional Component */}
         <ContainerFunction title="Pengumuman (function)">
@@ -24,14 +32,19 @@ export default function Home() {
         <ContainerClass title="Promo Spesial (class)">
           Dapatkan diskon potongan harga hingga 50% untuk kategori fashion dan kuliner hari ini!
         </ContainerClass>
-      </section>
 
-      {/* Grid Katalog Produk */}
-      <main className="product-grid">
-        {PRODUCTS.map((product) => (
-          <Card key={product.id} product={product} />
-        ))}
-      </main>
+        {/* Latihan BEM Container */}
+        <Container size="small" bordered={false} title="Latihan BEM (Small + No Border)">
+          Ini adalah contoh Container yang lebih kecil tanpa border.
+        </Container>
+        <Container size="medium" bordered={true} title="Medium + Bordered">
+          Ini adalah contoh Container yang berukuran medium dengan border.
+        </Container>
+        <Container size="large" bordered={true} title="Large + Bordered">
+          Ini adalah contoh Container yang lebih besar dengan border.
+        </Container>
+      </section>
     </>
   );
 }
+
