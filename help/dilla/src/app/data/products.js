@@ -1,0 +1,62 @@
+export const PRODUCTS = [
+  {
+    id: "1",
+    name: "Mechanical Keyboard Wireless RGB",
+    category: "Aksesoris Komputer",
+    price: "Rp 620.000",
+    badge: "Favorit",
+    theme: "blue", // Tema biru
+    image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+    description: "Keyboard mekanikal nirkabel dengan switch tactile dan lampu RGB kustom.",
+  },
+  {
+    id: "2",
+    name: "Sepatu Sneakers Classic Retro",
+    category: "Fashion & Sepatu",
+    price: "Rp 490.000",
+    badge: "Best Seller",
+    theme: "green", // Tema hijau
+    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+    description: "Sneakers bergaya klasik dengan insole empuk untuk kenyamanan seharian.",
+  },
+  {
+    id: "3",
+    name: "Stand Laptop Alumunium Ergonomis",
+    category: "Perlengkapan Kerja",
+    price: "Rp 185.000",
+    badge: "Diskon 10%",
+    theme: "red", // Tema merah
+    image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=600&q=80",
+    description: "Dudukan laptop kokoh fleksibel untuk menjaga postur leher dan punggung.",
+  },
+  {
+    id: "4",
+    name: "Kamera Instant Mini Retro",
+    category: "Fotografi & Hobi",
+    price: "Rp 1.150.000",
+    badge: "Baru",
+    theme: "blue",
+    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=600&q=80",
+    description: "Kamera cetak foto langsung jadi dengan desain vintage yang mungil.",
+  },
+  {
+    id: "5",
+    name: "Tumbler Stainless Vacuum 750ml",
+    category: "Gaya Hidup & Rumah",
+    price: "Rp 145.000",
+    badge: "Eco-Friendly",
+    theme: "green",
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+    description: "Botol minum tahan panas dan dingin hingga 12 jam berbahan stainless steel.",
+  },
+  {
+    id: "6",
+    name: "Powerbank Magnetic Fast Charge",
+    category: "Gadget & Daya",
+    price: "Rp 340.000",
+    badge: "Fast Charge",
+    theme: "red",
+    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+    description: "Pengisi daya nirkabel magnetik portabel dengan pengisian daya super cepat.",
+  },
+];

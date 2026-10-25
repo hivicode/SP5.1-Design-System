@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================= */
+/* HEADER STYLES (Align Left & Solid Color)  */
+/* ========================================= */
+.header {
+  text-align: left;
+  padding: 40px 24px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  font-size: clamp(26px, 4vw, 34px);
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 8px;
+  letter-spacing: -0.6px;
+}
+
+.header-subtitle {
+  color: #64748b;
+  font-size: clamp(15px, 2vw, 17px);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* ========================================= */
+/* PRODUCT GRID STYLES                       */
+/* ========================================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1200px;
+  margin: 24px auto 60px;
+  padding: 0 24px;
+}
+
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 28px 16px 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 16px;
+  }
+}

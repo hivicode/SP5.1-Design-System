@@ -1,0 +1,331 @@
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Variasi Tema Card & Hover Shadow Berwarna (Slide 9 Materi 3) */
+.cardBlue {
+  border-color: #e2e8f0;
+}
+.cardBlue:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(37, 99, 235, 0.15);
+  border-color: #93c5fd;
+}
+
+.cardGreen {
+  border-color: #e2e8f0;
+}
+.cardGreen:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(22, 163, 74, 0.15);
+  border-color: #86efac;
+}
+
+.cardRed {
+  border-color: #e2e8f0;
+}
+.cardRed:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(220, 38, 38, 0.15);
+  border-color: #fca5a5;
+}
+
+/* GAMBAR PERSEGI 1:1 PERSIS SEPERTI E-COMMERCE / SHOPEE */
+.media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #f8fafc;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px 16px;
+  flex: 1;
+}
+
+.category {
+  font-size: 11px;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 4px 0 6px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+}
+
+.description {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footerWrapper {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* Badge sekarang ditaruh di atas harga (tidak melayang di pojok atas) */
+.badgeWrapper {
+  margin-bottom: 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.badgeBlue {
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.badgeGreen {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.badgeRed {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* Harga ala marketplace */
+.price {
+  font-size: 18px;
+  font-weight: 800;
+  color: #e11d48;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+/* Variasi Tombol (primary, secondary, danger) sesuai Slide 9 */
+.actionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btnSecondary {
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btnSecondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.btnPrimary {
+  padding: 8px 12px;
+  border: none;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btnPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+.btnDanger {
+  padding: 8px 12px;
+  border: none;
+  background-color: #dc2626;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btnDanger:hover {
+  background-color: #b91c1c;
+}
+
+/* Modal Popup */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.modalBox {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #e2e8f0;
+}
+
+.btnClose {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: rgba(255, 255, 255, 0.95);
+  color: #475569;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btnClose:hover {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.modalImageContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  max-height: 280px;
+  background-color: #f8fafc;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalBody {
+  padding: 20px;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 10px 0 6px;
+  line-height: 1.35;
+}
+
+.modalDescription {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.modalPrice {
+  font-size: 22px;
+  font-weight: 800;
+  color: #e11d48;
+  margin-top: 14px;
+}
+
+/* ========================================================= */
+/* CSS MEDIA QUERY (Sesuai Materi 4 Slide 14 & 18)           */
+/* ========================================================= */
+
+/* Tablet: 768px - 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .content {
+    padding: 14px;
+  }
+  .title {
+    font-size: 14px;
+  }
+}
+
+/* Smartphone / Mobile: max-width 767px */
+@media screen and (max-width: 767px) {
+  .content {
+    padding: 12px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .actionsGrid {
+    gap: 6px;
+  }
+  .btnSecondary, .btnPrimary, .btnDanger {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}
