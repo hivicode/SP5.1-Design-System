@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <header className="header">
-        <h1 className="header-title">Katalog Produk UMKM Pilihan</h1>
+        <h1 className="header-title">Katalog Handphone Pilihan</h1>
         <p className="header-subtitle">
-          Berbagai pilihan produk terbaik untuk memenuhi kebutuhan harian dan gaya hidup Anda.
+          Berbagai pilihan produk handphone terbaik untuk memenuhi kebutuhan harian dan gaya hidup Anda.
         </p>
       </header>
 
