@@ -1,0 +1,314 @@
+/* ==========================================================================
+   COOLYEAH PORTAL DASHBOARD STYLES (BEM)
+   ========================================================================== */
+
+.topHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: var(--border-width-thin) solid var(--color-border);
+}
+
+.topHeader__left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.topHeader__menuToggle {
+  display: none;
+  padding: 8px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.topHeader__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  letter-spacing: -0.5px;
+}
+
+.topHeader__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.topHeader__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 320px;
+  width: 100%;
+}
+
+/* STATS ROW */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statItem__label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 4px;
+}
+
+.statItem__val {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+/* MAIN CONTENT GRID */
+.portalGrid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.portalMain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  min-width: 0;
+}
+
+.portalAside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* SCHEDULE LIST */
+.scheduleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.scheduleItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background-color: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all 150ms ease;
+}
+
+.scheduleItem:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.scheduleItem__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.scheduleItem__title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+}
+
+.scheduleItem__meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.scheduleItem__right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: right;
+}
+
+.scheduleItem__time {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.scheduleItem__room {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* ANNOUNCEMENT LIST */
+.announcementList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.announcementItem {
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.announcementItem__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.announcementItem__date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.announcementItem__title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.announcementItem__summary {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* TABLE STYLING FOR ACADEMIC & TUITION */
+.academicTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  text-align: left;
+}
+
+.academicTable th {
+  background-color: var(--color-surface-subtle);
+  padding: 12px 16px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.academicTable td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+.academicTable tr:last-child td {
+  border-bottom: none;
+}
+
+.academicTable tr:hover td {
+  background-color: #fafbfc;
+}
+
+/* DAY FILTER PILLS */
+.dayFilters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-md);
+}
+
+.dayBtn {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.dayBtn:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-text-main);
+}
+
+.dayBtn--active {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* DESIGN SYSTEM SHOWCASE */
+.showcaseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.showcaseRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 1024px) {
+  .topHeader__menuToggle {
+    display: inline-flex;
+  }
+
+  .portalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .topHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .topHeader__right {
+    max-width: 100%;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .scheduleItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .scheduleItem__right {
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

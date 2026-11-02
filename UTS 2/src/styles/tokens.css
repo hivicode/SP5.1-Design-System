@@ -1,0 +1,114 @@
+/* ==========================================================================
+   COOLYEAH / RUANGKAMPUS DESIGN SYSTEM TOKENS
+   Color Identity: Biru - Kuning (Academic Campus Portal)
+   Typography: Arial, Helvetica, sans-serif (No Google Fonts)
+   Methodology: BEM & Plain CSS Variables
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. COLOR PALETTE (Blue - Yellow Identity)
+     ------------------------------------------------------------------------ */
+  /* Primary & Brand Blue */
+  --color-primary: #1A56DB;          /* Classic Academic Royal Blue */
+  --color-primary-hover: #1342AC;    /* Deep Blue Hover */
+  --color-primary-light: #EBF2FE;    /* Soft Ice Blue */
+  --color-primary-focus: rgba(26, 86, 219, 0.22);
+
+  /* Secondary & Brand Yellow / Amber */
+  --color-secondary: #F59E0B;        /* Warm Campus Yellow / Amber */
+  --color-secondary-hover: #D97706;  /* Golden Amber Hover */
+  --color-secondary-light: #FEF3C7;  /* Soft Warm Yellow */
+
+  /* Neutral Surface & Background */
+  --color-bg: #F4F6F9;               /* Crisp Clean Academic Background */
+  --color-surface: #FFFFFF;          /* Pure White Card Surface */
+  --color-surface-subtle: #EEF2F6;   /* Subtle Table / Field Surface */
+
+  /* Typography Colors */
+  --color-text-main: #1E293B;        /* Slate Charcoal Dark */
+  --color-text-secondary: #64748B;   /* Slate Gray */
+  --color-text-tertiary: #94A3B8;    /* Light Slate */
+  --color-text-inverse: #FFFFFF;     /* White */
+
+  /* Borders & Dividers */
+  --color-border: #E2E8F0;           /* Soft Crisp Border */
+  --color-border-subtle: #F1F5F9;    /* Hairline Divider */
+  --color-border-hover: #CBD5E1;     /* Active Border */
+
+  /* Semantic Feedback & Status */
+  --color-success: #16A34A;          /* Emerald Green */
+  --color-success-light: #DCFCE7;
+  
+  --color-warning: #D97706;          /* Amber Warm */
+  --color-warning-light: #FEF3C7;
+  
+  --color-danger: #DC2626;           /* Crisp Crimson */
+  --color-danger-light: #FEE2E2;
+  
+  --color-info: #0284C7;             /* Sky Blue */
+  --color-info-light: #E0F2FE;
+
+  /* ------------------------------------------------------------------------
+     2. TYPOGRAPHY (Strictly Arial, Helvetica, sans-serif)
+     ------------------------------------------------------------------------ */
+  --font-family-sans: Arial, Helvetica, sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 12px;
+  --font-size-sm: 13.5px;
+  --font-size-base: 15px;
+  --font-size-md: 17px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+
+  /* ------------------------------------------------------------------------
+     3. SPACING & SIZING
+     ------------------------------------------------------------------------ */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* ------------------------------------------------------------------------
+     4. BORDERS & RADII
+     ------------------------------------------------------------------------ */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --border-width-thin: 1px;
+
+  /* ------------------------------------------------------------------------
+     5. SHADOWS & ELEVATION
+     ------------------------------------------------------------------------ */
+  --shadow-none: none;
+  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 2px 5px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-dropdown: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
+
+  /* ------------------------------------------------------------------------
+     6. LAYOUT DIMENSIONS
+     ------------------------------------------------------------------------ */
+  --sidebar-width: 250px;
+  --content-max-width: 1360px;
+}
+

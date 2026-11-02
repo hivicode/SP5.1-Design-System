@@ -1,0 +1,156 @@
+/* ==========================================================================
+   SIDEBAR COMPONENT (BEM)
+   Identity: CoolYeah / RuangKampus
+   ========================================================================== */
+
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-surface);
+  border-right: var(--border-width-thin) solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: 50;
+  transition: transform 200ms ease;
+}
+
+.sidebar__header {
+  padding: var(--space-lg);
+  border-bottom: var(--border-width-thin) solid var(--color-border-subtle);
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar__logoBadge {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  border: 1px solid var(--color-primary-hover);
+}
+
+.sidebar__brandName {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: -0.3px;
+}
+
+.sidebar__brandName span {
+  color: var(--color-secondary);
+}
+
+.sidebar__nav {
+  flex: 1;
+  padding: var(--space-md) var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.sidebar__item {
+  width: 100%;
+}
+
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  border: 1px solid transparent;
+  transition: all 150ms ease;
+}
+
+.sidebar__link:hover {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+}
+
+.sidebar__item--active .sidebar__link {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: rgba(26, 86, 219, 0.2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.sidebar__footer {
+  padding: var(--space-md);
+  border-top: var(--border-width-thin) solid var(--color-border-subtle);
+  background-color: var(--color-surface-subtle);
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+}
+
+.sidebar__userName {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.sidebar__userRole {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.sidebarBackdrop {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar--mobileOpen {
+    transform: translateX(0);
+    box-shadow: var(--shadow-dropdown);
+  }
+
+  .sidebarBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    z-index: 45;
+  }
+}
+
