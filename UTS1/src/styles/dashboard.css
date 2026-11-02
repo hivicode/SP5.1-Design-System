@@ -1,0 +1,78 @@
+/* ==========================================================================
+   DASHBOARD MAIN PAGE STYLES (BEM)
+   Editorial Academic Grid Layout
+   ========================================================================== */
+
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.dashboardMain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+
+.dashboardAside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* SECTION HEADER WITH EDITORIAL ACCENT */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+
+.sectionTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  letter-spacing: -0.3px;
+}
+
+.sectionSubtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* STUDY TIPS / EDITORIAL CARD */
+.tipCard {
+  background-color: var(--color-primary-light);
+  border: var(--border-width-thin) solid rgba(53, 94, 75, 0.2);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+}
+
+.tipCard__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.tipCard__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-main);
+  line-height: var(--line-height-normal);
+}
+
+@media (max-width: 1024px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+

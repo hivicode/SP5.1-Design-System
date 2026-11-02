@@ -1,0 +1,83 @@
+/* ==========================================================================
+   INPUT COMPONENT (BEM)
+   Block: .form-field
+   Elements: .form-field__label, .form-field__input, .form-field__error, .form-field__hint
+   Modifiers: .form-field--error, .form-field--disabled
+   ========================================================================== */
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.required {
+  color: var(--color-danger);
+  margin-left: 2px;
+}
+
+.inputControl {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  color: var(--color-text-main);
+  background-color: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.inputControl::placeholder {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.inputControl:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+}
+
+.inputControl:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-focus);
+}
+
+.inputControl:disabled {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-tertiary);
+  cursor: not-allowed;
+  border-color: var(--color-border-subtle);
+}
+
+/* ERROR STATE */
+.formField--error .inputControl {
+  border-color: var(--color-danger);
+  background-color: #fffdfd;
+}
+
+.formField--error .inputControl:focus {
+  box-shadow: 0 0 0 3px rgba(217, 104, 104, 0.2);
+}
+
+.errorText {
+  font-size: var(--font-size-xs);
+  color: var(--color-danger);
+  font-weight: var(--font-weight-medium);
+}
+
+.hintText {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+

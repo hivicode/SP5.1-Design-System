@@ -1,0 +1,106 @@
+/* ==========================================================================
+   BADGE COMPONENT (BEM)
+   Block: .badge
+   Modifiers: 
+     Status: --pending, --in-progress, --completed
+     Priority: --priority-high, --priority-medium, --priority-low
+     Neutral: --neutral
+   Sizes: --sm, --md
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  padding: 4px 9px;
+  border-radius: var(--radius-full);
+  border: var(--border-width-thin) solid transparent;
+  white-space: nowrap;
+}
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* SIZES */
+.badge--sm {
+  padding: 3px 7px;
+  font-size: 0.7rem;
+}
+
+.badge--md {
+  padding: 4px 10px;
+  font-size: var(--font-size-xs);
+}
+
+/* STATUS VARIANTS */
+.badge--pending {
+  background-color: var(--color-warning-subtle);
+  color: #925c11;
+  border-color: rgba(230, 170, 75, 0.35);
+}
+.badge--pending .badge__dot {
+  background-color: var(--color-warning);
+}
+
+.badge--in-progress {
+  background-color: var(--color-info-subtle);
+  color: #295b7f;
+  border-color: rgba(80, 125, 158, 0.35);
+}
+.badge--in-progress .badge__dot {
+  background-color: var(--color-info);
+}
+
+.badge--completed {
+  background-color: var(--color-success-subtle);
+  color: #2c6645;
+  border-color: rgba(79, 147, 108, 0.35);
+}
+.badge--completed .badge__dot {
+  background-color: var(--color-success);
+}
+
+/* PRIORITY VARIANTS */
+.badge--priority-high {
+  background-color: var(--color-danger-subtle);
+  color: #9c2e2e;
+  border-color: rgba(217, 104, 104, 0.35);
+  font-weight: var(--font-weight-semibold);
+}
+.badge--priority-high .badge__dot {
+  background-color: var(--color-danger);
+}
+
+.badge--priority-medium {
+  background-color: var(--color-accent-subtle);
+  color: #a05c1d;
+  border-color: rgba(232, 154, 82, 0.35);
+}
+.badge--priority-medium .badge__dot {
+  background-color: var(--color-accent);
+}
+
+.badge--priority-low {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+}
+.badge--priority-low .badge__dot {
+  background-color: var(--color-text-secondary);
+}
+
+/* NEUTRAL / COURSE */
+.badge--neutral {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+}
+

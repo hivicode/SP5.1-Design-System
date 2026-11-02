@@ -1,0 +1,124 @@
+/* ==========================================================================
+   BUTTON COMPONENT (BEM)
+   Block: .button
+   Modifiers: --primary, --secondary, --outline, --ghost, --danger
+   Sizes: --sm, --md, --lg
+   State: --disabled, :hover, :focus
+   ========================================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  user-select: none;
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary-focus);
+}
+
+/* SIZES */
+.button--sm {
+  padding: 6px 12px;
+  font-size: var(--font-size-sm);
+  border-radius: var(--radius-xs);
+}
+
+.button--md {
+  padding: 10px 18px;
+  font-size: var(--font-size-base);
+}
+
+.button--lg {
+  padding: 14px 24px;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* VARIANTS */
+.button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-primary);
+}
+
+.button--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.button--secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+}
+
+.button--secondary:hover:not(:disabled) {
+  background-color: var(--color-bg);
+  border-color: var(--color-border-hover);
+  color: var(--color-text-main);
+}
+
+.button--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.button--outline:hover:not(:disabled) {
+  background-color: var(--color-primary-light);
+}
+
+.button--ghost {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+
+.button--ghost:hover:not(:disabled) {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-text-main);
+}
+
+.button--danger {
+  background-color: var(--color-danger);
+  color: var(--color-text-inverse);
+  border-color: var(--color-danger);
+}
+
+.button--danger:hover:not(:disabled) {
+  background-color: #c45555;
+  border-color: #c45555;
+}
+
+/* MODIFIER: FULL WIDTH */
+.button--full {
+  width: 100%;
+}
+
+/* STATES */
+.button:disabled,
+.button--disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+}
+

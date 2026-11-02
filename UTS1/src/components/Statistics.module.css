@@ -1,0 +1,103 @@
+/* ==========================================================================
+   STATISTICS OVERVIEW COMPONENT (BEM)
+   Block: .stats
+   Elements: .stats__grid, .stats__card, .stats__value, .stats__label, .stats__icon
+   Modifiers: .stats__card--total, .stats__card--pending, 
+              .stats__card--progress, .stats__card--completed
+   ========================================================================== */
+
+.stats {
+  margin-bottom: var(--space-xl);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+}
+
+.stats__card {
+  background-color: var(--color-surface);
+  border: var(--border-width-thin) solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.stats__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.stats__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats__label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.stats__value {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-main);
+  line-height: 1;
+}
+
+.stats__iconWrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* MODIFIER COLORS (Restrained, not glaring gradients) */
+.stats__card--total .stats__iconWrapper {
+  background-color: var(--color-surface-subtle);
+  color: var(--color-primary);
+}
+
+.stats__card--pending .stats__iconWrapper {
+  background-color: var(--color-warning-subtle);
+  color: #a86b16;
+}
+
+.stats__card--progress .stats__iconWrapper {
+  background-color: var(--color-info-subtle);
+  color: var(--color-info);
+}
+
+.stats__card--completed .stats__iconWrapper {
+  background-color: var(--color-success-subtle);
+  color: var(--color-success);
+}
+
+@media (max-width: 992px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .stats__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xs);
+  }
+
+  .stats__card {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
+
